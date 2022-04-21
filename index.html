@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma-rtl.min.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="nav">
+                <a href="">
+                    ロゴ<img src="" alt="">
+                </a>
+                <div class="nav__right">
+                    <div class="cart">
+                        <div class="cart__cnt hidden">
+                            <span class="js__cart__cnt"></span>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        
+    </header>
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column">
+                    <div class="product__img">
+                        <img src="./img/a.jpg" alt="">
+                    </div>
+                    <div class="product__box">
+                        <h2 class="product__box__ttl">商品A</h2>
+                        <button class="button cartBtn" data-price="2000" data-name="商品A">カートに入れる</button>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="product__img">
+                        <img src="./img/a.jpg" alt="">
+                    </div>
+                    <div class="product__box">
+                        <h2 class="product__box__ttl">商品B</h2>
+                        <button class="button cartBtn" data-price="4000" data-name="商品B">カートに入れる</button>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="product__img">
+                        <img src="./img/a.jpg" alt="">
+                    </div>
+                    <div class="product__box">
+                        <h2 class="product__box__ttl">商品C</h2>
+                        <button class="button cartBtn" data-price="6000" data-name="商品C">カートに入れる</button>
+                    </div>
+                </div>
+            </div>
+
+            <button class="button is-primary confirmCart modal__trigger" class="js-modal-trigger" data-target="modal__cart">カートの中身を確認する</button>
+
+            <div class="modal" id="modal__cart">
+                <div class="modal-background"></div>
+                <div class="modal-content">
+                    <section class="section">
+                        <ul class="shopping__list">
+
+                        </ul>
+                        <p id="total">
+        
+                        </p>
+                        <button class="purchace button is-primary">購入する</button>    
+                    </section>
+                    
+                </div>
+            <button class="modal-close is-large" aria-label="close"></button>
+            </div>
+            
+        </div>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="index.js"></script>
+    <script src="modal.js"></script>
+    
+</body>
+</html>
+
+
+
+
+<!-- 
+メモ
+js innerHTML と　jqueryのhtmlは一緒
+
+■innerHTMLについて
+https://qiita.com/azusanakano/items/f16c3f7333be826dbcdf
+
+appendとhtmlの違い
+
+jquery eachの使い方
+https://www.sejuku.net/blog/33609
+
+同じボタンを3回以上クリックすると、正常に動作しなくなる
+
+HTMLをただ文字列で入れるだけだとダメで、appendしないとだめ
+
+jqueryで
+[object Objec]って出てくる
+オブジェクトってなに？→いろんなプロパティとその値を持つもの
+
+-->
